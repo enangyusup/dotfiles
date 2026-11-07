@@ -1,0 +1,27 @@
+# General settings
+[general]
+live_config_reload = true   # Reloads settings automatically when you save
+
+# Window styling
+[window]
+padding = { x = 5, y = 5 }
+dynamic_padding = true
+opacity = 0.95              # Slightly translucent background (0.0 to 1.0)
+blur = true                 # Enables background blur (supported on macOS/KDE/Gnome)
+
+# Font configuration
+[font]
+size = 11.0
+
+[font.normal]
+family = "JetBrains Mono"        # Change to "Fira Code", "JetBrains Mono", etc.
+style = "Regular"
+
+# Cursor customizations
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+
+# Scrolling history
+[scrolling]
+history = 10000             # Number of lines kept in memory

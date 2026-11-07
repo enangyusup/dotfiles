@@ -1,0 +1,11 @@
+[alias]
+    s = status
+    co = checkout
+    ci = commit -v
+    br = branch
+    h = log --oneline --graph --all
+[user]
+    email = enang.yusup@gmail.com
+    user = Enang Yusup
+[init]
+    defaultBranch = main
