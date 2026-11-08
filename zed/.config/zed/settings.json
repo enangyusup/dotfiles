@@ -34,4 +34,17 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha",
   },
+  "file_scan_exclusions": [
+    "**/__pycache__",
+    "**/.venv",
+    "**/.ruff_cache",
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ]
 }
