@@ -112,4 +112,3 @@ alias yd-mp3="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata --au
 alias activate="source .venv/bin/activate"
 
 eval "$(/home/enang/.local/bin/mise activate zsh)"
-. "/home/enang/.deno/env"
