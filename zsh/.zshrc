@@ -109,6 +109,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias yd-mp4="yt-dlp -S ext:mp4:m4a"
 alias yd-mp3="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata --audio-quality 128K"
 alias activate="source .venv/bin/activate"
+alias loadzsh="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"
 
