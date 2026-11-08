@@ -1,4 +1,3 @@
-# Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/enang/.zsh/completions:"* ]]; then export FPATH="/home/enang/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -75,7 +74,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv)
+plugins=(git virtualenv docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,12 +102,14 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
+
+#alias
 alias zshconfig="nvim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias yd-mp4="yt-dlp -S ext:mp4:m4a"
 alias yd-mp3="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata --audio-quality 128K"
 alias activate="source .venv/bin/activate"
+alias vim="nvim"
+alias vi="nvim"
 
 eval "$(/home/enang/.local/bin/mise activate zsh)"
