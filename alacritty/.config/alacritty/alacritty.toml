@@ -26,3 +26,10 @@ blink_interval = 750
 # Scrolling history
 [scrolling]
 history = 10000             # Number of lines kept in memory
+
+#auto launch zellij
+[terminal.shell]
+program = "zellij"
+# Optional arguments (e.g., to attach to an existing session or start fresh)
+# args = ["options", "--attach-to-session", "true"]
+
