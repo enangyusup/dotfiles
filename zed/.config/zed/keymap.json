@@ -28,7 +28,21 @@
       "ctrl-n": [
         "terminal::SendKeystroke",
         "ctrl-n"
+      ],
+      "ctrl-j": [
+        "terminal::SendKeystroke",
+        "ctrl-j"
+      ],
+      "ctrl-k": [
+        "terminal_panel::ToggleFocus",
+        "ctrl-k"
       ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "terminal_panel::ToggleFocus"
     }
   }
 ]
