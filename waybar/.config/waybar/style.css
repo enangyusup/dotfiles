@@ -1,0 +1,405 @@
+/* ======================
+   GLOBAL
+====================== */
+
+* {
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+}
+
+
+/* ======================
+   WINDOW
+====================== */
+
+window#waybar {
+    background-color: rgba(16, 36, 22, 0.85);
+    border-bottom: 0.188em solid rgba(16, 36, 22, 0.9);
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #2F4F3F;
+}
+
+window#waybar.chromium {
+    background-color: #162D20;
+    border: none;
+}
+
+
+/* ======================
+   BUTTONS
+====================== */
+
+button {
+    box-shadow: inset 0 -0.188em transparent;
+    border: none;
+    border-radius: 0.313em;
+    margin: 0.213em;
+}
+
+button:hover,
+#pulseaudio:hover,
+#idle_inhibitor:hover,
+#clock:hover {
+    background: #00a489;
+    color: #0e1c14;
+}
+
+
+/* ======================
+   WORKSPACES
+====================== */
+
+#workspaces {
+    background-color: #6da741;
+    margin: 0.625em;
+    border-radius: 0.313em;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 0.313em;
+    padding: 0 0.213em;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 50, 25, 0.8);
+}
+
+#workspaces button.focused {
+    background-color: #162D20;
+}
+
+#workspaces button.urgent {
+    background-color: #56C56B;
+}
+
+
+/* ======================
+   MODULE BASE STYLE
+====================== */
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#custom-network-speed,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    color: #ffffff;
+    border-radius: 0.313em;
+    margin: 0.625em 0.3125em;
+    padding: 0 0.625em;
+}
+
+
+/* ======================
+   MODE
+====================== */
+
+#mode {
+    background-color: #3E8E41;
+    box-shadow: inset 0 -0.188em #ffffff;
+}
+
+
+/* ======================
+   CLOCK
+====================== */
+
+#clock {
+    background-color: #110B11;
+    color: #56C56B;
+}
+
+
+/* ======================
+   BATTERY
+====================== */
+
+#battery {
+    background-color: #162D20;
+    color: #1B3321;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #81C784;
+    color: #1B3321;
+    animation: blink 0.5s steps(12) infinite alternate;
+}
+
+
+/* ======================
+   POWER PROFILES
+====================== */
+
+#power-profiles-daemon.performance {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #A5D6A7;
+    color: #1B3321;
+}
+
+
+/* ======================
+   CPU / MEMORY / DISK
+====================== */
+
+#cpu,
+#memory {
+    background-color: #162D20;
+    color: #ffffff;
+}
+
+#disk {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+
+/* ======================
+   BACKLIGHT
+====================== */
+
+#backlight {
+    background-color: #66BB6A;
+    color: #1B3321;
+}
+
+
+/* ======================
+   NETWORK
+====================== */
+
+#network,
+#custom-network-speed {
+    background-color: #162D20;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    background-color: #56C56B;
+}
+
+
+/* ======================
+   AUDIO
+====================== */
+
+#pulseaudio {
+    background-color: #162D20;
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    background-color: #A5D6A7;
+    color: #1B3321;
+}
+
+#wireplumber {
+    background-color: #C8E6C9;
+    color: #1B3321;
+}
+
+#wireplumber.muted {
+    background-color: #56C56B;
+}
+
+
+/* ======================
+   MEDIA
+====================== */
+
+#custom-media {
+    background-color: #66BB6A;
+    color: #1B3321;
+}
+
+#custom-media.custom-spotify {
+    background-color: #56C56B;
+}
+
+#custom-media.custom-vlc {
+    background-color: #3E8E41;
+}
+
+#mpd {
+    background-color: #66BB6A;
+    color: #1B3321;
+}
+
+#mpd.disconnected {
+    background-color: #56C56B;
+}
+
+#mpd.stopped {
+    background-color: #A5D6A7;
+}
+
+#mpd.paused {
+    background-color: #3E8E41;
+}
+
+
+/* ======================
+   TEMPERATURE
+====================== */
+
+#temperature {
+    background-color: #162D20;
+    color: #ffffff;
+}
+
+#temperature.critical {
+    background-color: #BB4430;
+}
+
+
+/* ======================
+   TRAY
+====================== */
+
+#tray {
+    background-color: #162D20;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #56C56B;
+}
+
+
+/* ======================
+   IDLE INHIBITOR
+====================== */
+
+#idle_inhibitor {
+    background-color: #162D20;
+}
+
+#idle_inhibitor.activated {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+
+/* ======================
+   INPUT / LANGUAGE
+====================== */
+
+#language {
+    background: #43A047;
+    color: #1B3321;
+}
+
+#keyboard-state {
+    background: #A5D6A7;
+    color: #1B3321;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 50, 25, 0.3);
+}
+
+
+/* ======================
+   SCRATCHPAD
+====================== */
+
+#scratchpad {
+    background: rgba(0, 50, 25, 0.3);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+
+/* ======================
+   PRIVACY
+====================== */
+
+#privacy-item {
+    color: #ffffff;
+}
+
+#privacy-item.screenshare {
+    background-color: #3E8E41;
+}
+
+#privacy-item.audio-in {
+    background-color: #56C56B;
+}
+
+#privacy-item.audio-out {
+    background-color: #43A047;
+}
+
+
+/* ======================
+   CUSTOM POWER
+====================== */
+
+#custom-power {
+    color: #0e1c14;
+    background-color: #6da741;
+    padding-right: 0.213em;
+    margin-right: 0.625em;
+}
+
+#custom-power:hover {
+    background-color: #00a489;
+}
+
+
+/* ======================
+   ANIMATIONS
+====================== */
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #1B3321;
+    }
+}
+
+label:focus {
+    background-color: #162D20;
+}

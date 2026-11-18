@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="steeef"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,9 +106,9 @@ source $ZSH/oh-my-zsh.sh
 
 #alias
 alias zshconfig="nvim ~/.zshrc"
-alias yd-mp4="yt-dlp -S ext:mp4:m4a"
+alias yd-mp4="yt-dlp -S res,ext:mp4:m4a --recode mp4"
 alias yd-mp3="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata --audio-quality 128K"
-alias activate="source .venv/bin/activate"
+alias activate="[ -f '.venv/bin/activate' ] && source .venv/bin/activate"
 alias loadzsh="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"

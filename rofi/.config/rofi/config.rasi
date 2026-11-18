@@ -1,0 +1,6 @@
+configuration {
+      show-icons: true;
+      icon-theme: "Colloid-Green-Dark";
+      //font: "FiraCode Nerd Font ";
+    }
+@theme "~/.config/rofi/themes/chameleon-grove-green.rasi"
