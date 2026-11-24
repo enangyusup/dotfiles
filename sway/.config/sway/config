@@ -1,39 +1,13 @@
-# =========================================
-# Sway 4K Optimized Configuration
-# Theme: Chameleon Grove Green
-# =========================================
-# This configuration is tailored for 4K displays.
-# Features include:
-#   - Large, readable Sway window title fonts
-#   - Green-themed window frames ("Chameleon Grove Green")
-#   - Large mouse cursor
-#   - GTK & Qt application scaling for HiDPI
-#   - Idle and power management configuration
-#   - Keybindings for window management, navigation, workspaces
-#   - Extensive English comments for clarity
-
-### Variables
-# -------------------------
-# Super/Windows key for shortcuts -> Mod4 or Mod1 for ALT-Key
 set $mod Mod4
-# Vim-style navigation keys
 set $left h
 set $down j
 set $up k
 set $right l
 
-# Preferred terminal emulator
 set $term ghostty
-# Application launcher
-set $rofi_cmd rofi -terminal '$term'
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $menu wofi --show drun
 
-### Output configuration
-# -------------------------
-# Default wallpaper for all outputs
-output * bg $HOME/.local/share/backgrounds/origami-green-chameleon-with-dark-bg-1-4864x3328.jpg fill
-#output * bg /home/enang/.local/share/backgrounds/origami-mouse-chameleon.jpg fill
-
+output * bg $HOME/Pictures/dark-forest.jpg fill
 
 # Configure primary 4K monitor
 # Run this command in a terminal to get all information: swaymsg -t get_outputs
@@ -65,6 +39,12 @@ input * {
 # Launch terminal
 bindsym $mod+Return exec $term
 
+# Launch zeditor
+bindsym $mod+z exec zeditor
+
+# Launch browser
+bindsym $mod+g exec google-chrome-stable
+
 # Kill focused window
 bindsym $mod+q kill
 
@@ -94,7 +74,7 @@ bindsym $mod+Shift+s exec swaylock
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Audio Control
-bindsym $mod+plus exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym $mod+equal exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
 bindsym $mod+minus exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
@@ -213,17 +193,61 @@ bar {
     swaybar_command waybar
 }
 
-### Window Colors – Chameleon Grove Green Palette
-# -------------------------
-# Active window
-client.focused #57886C #334d3f #FFFFFF #57886C #334d3f
-# Inactive window
-client.focused_inactive #334d3f #1a2a22 #CCCCCC #445c4e #1a2a22
-# Visible but unfocused
-client.unfocused #2a3b33 #1a2a22 #AAAAAA #3b5b4c #1a2a22
-# Urgent window
-client.urgent #78bfa1 #445c4e #FFFFFF #78bfa1 #334d3f
-# Split container placeholders
-client.placeholder #445c4e #1a2a22 #AAAAAA #445c4e #1a2a22
-# Background / special tagged windows
-client.background #1a2a22 #1a2a22 #888888 #1a2a22 #1a2a22
+# include themes/catppuccin-mocha
+#
+# # target                 title     bg    text   indicator  border
+# client.focused           $lavender $base $text  $rosewater $lavender
+# client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+# client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+# client.urgent            $peach    $base $peach $overlay0  $peach
+# client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+# client.background        $base
+#
+# # bar
+# bar {
+#     id default
+#     position top
+#     height 26
+#     font pango:JetBrainsMono Nerd Font 10
+#     separator_symbol " | "
+#     status_command i3status
+#
+#     # System tray settings
+#     tray_output primary
+#     tray_padding 4
+#     icon_theme Adwaita
+#
+#     # Workspace buttons
+#     workspace_buttons yes
+#     strip_workspace_numbers no
+#     binding_mode_indicator yes
+#
+#     colors {
+#         background         $base
+#         statusline         $text
+#         focused_statusline $text
+#         focused_separator  $base
+#
+#         # target           border bg        text
+#         focused_workspace  $base  $mauve    $crust
+#         active_workspace   $base  $surface2 $text
+#         inactive_workspace $base  $base     $text
+#         urgent_workspace   $base  $red      $crust
+#     }
+# }
+#
+
+# ### Window Colors – Chameleon Grove Green Palette
+# # -------------------------
+# # Active window
+# client.focused #57886C #334d3f #FFFFFF #57886C #334d3f
+# # Inactive window
+# client.focused_inactive #334d3f #1a2a22 #CCCCCC #445c4e #1a2a22
+# # Visible but unfocused
+# client.unfocused #2a3b33 #1a2a22 #AAAAAA #3b5b4c #1a2a22
+# # Urgent window
+# client.urgent #78bfa1 #445c4e #FFFFFF #78bfa1 #334d3f
+# # Split container placeholders
+# client.placeholder #445c4e #1a2a22 #AAAAAA #445c4e #1a2a22
+# # Background / special tagged windows
+# client.background #1a2a22 #1a2a22 #888888 #1a2a22 #1a2a22
