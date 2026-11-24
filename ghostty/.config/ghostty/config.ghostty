@@ -1,0 +1,27 @@
+# Typography
+font-family = JetBrains Mono
+font-size = 10
+font-thicken = true
+
+# Theme & Appearance
+theme = Catppuccin Mocha
+background-opacity = 0.9
+background-blur-radius = 20
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
+
+# Cursor & Behavior
+cursor-style = block
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+shell-integration = detect
+
+# Keybindings
+keybind = ctrl+%=new_split:right
+keybind = ctrl+"=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+

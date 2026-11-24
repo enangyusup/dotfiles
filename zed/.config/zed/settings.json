@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_weight": 400.0,
+  "terminal": {
+    "font_size": 13.0,
+    "font_family": "JetBrains Mono NL"
+  },
   "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "buffer_font_family": "JetBrains Mono NL",
@@ -27,10 +32,10 @@
   "git_panel": {
     "dock": "left"
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 14.0,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 12.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
     "dark": "Catppuccin Mocha",
   },

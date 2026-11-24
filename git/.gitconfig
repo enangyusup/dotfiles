@@ -6,6 +6,8 @@
     h = log --oneline --graph --all
 [user]
     email = enang.yusup@gmail.com
-    user = Enang Yusup
+	name = Enang Yusup
 [init]
     defaultBranch = main
+[core]
+    editor = nvim
