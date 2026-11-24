@@ -14,8 +14,8 @@
         // "sway/window"
     // ],
     "modules-right": [
-        // "idle_inhibitor",
-        "mpd",
+        "idle_inhibitor",
+        // "mpd",
         "cpu",
         "temperature",
         "memory",

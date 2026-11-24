@@ -23,7 +23,7 @@ set $up k
 set $right l
 
 # Preferred terminal emulator
-set $term alacritty
+set $term ghostty
 # Application launcher
 set $rofi_cmd rofi -terminal '$term'
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
@@ -31,13 +31,13 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 ### Output configuration
 # -------------------------
 # Default wallpaper for all outputs
-# output * bg $HOME/.local/share/backgrounds/origami-green-chameleon-with-dark-bg-1-4864x3328.jpg fill
-output * bg /home/enang/.local/share/backgrounds/origami-mouse-chameleon.jpg fill
+output * bg $HOME/.local/share/backgrounds/origami-green-chameleon-with-dark-bg-1-4864x3328.jpg fill
+#output * bg /home/enang/.local/share/backgrounds/origami-mouse-chameleon.jpg fill
 
 
 # Configure primary 4K monitor
 # Run this command in a terminal to get all information: swaymsg -t get_outputs
-output DP-2 mode 1920x1080@99.930Hz scale 1.0
+#output DP-2 mode 1920x1080@99.930Hz scale 1.0
 
 # Disable secondary output if not used
 #output DP-8 disable
@@ -201,8 +201,13 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 # -------------------------
 # Window title font
 font pango:Noto Sans Mono 9
+default_border none
+default_floating_border none
+hide_edge_borders both
+gaps inner 5
 
-# exec_always ~/.config/sway/scripts/setup.sh
+
+#exec_always ~/.config/sway/scripts/setup.sh
 
 bar {
     swaybar_command waybar
@@ -212,18 +217,13 @@ bar {
 # -------------------------
 # Active window
 client.focused #57886C #334d3f #FFFFFF #57886C #334d3f
-
 # Inactive window
 client.focused_inactive #334d3f #1a2a22 #CCCCCC #445c4e #1a2a22
-
 # Visible but unfocused
 client.unfocused #2a3b33 #1a2a22 #AAAAAA #3b5b4c #1a2a22
-
 # Urgent window
 client.urgent #78bfa1 #445c4e #FFFFFF #78bfa1 #334d3f
-
 # Split container placeholders
 client.placeholder #445c4e #1a2a22 #AAAAAA #445c4e #1a2a22
-
 # Background / special tagged windows
 client.background #1a2a22 #1a2a22 #888888 #1a2a22 #1a2a22
